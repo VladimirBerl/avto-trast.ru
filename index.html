@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Site</title>
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <div class="container">
+        <nav class="navbar">
+          <a class="navbar-logo" href="#">АВТОТРАСТ-ЮГ</a>
+          <button class="navbar-toggle" id="navbar-toggle">
+            <div class="navbar-toggle-item"></div>
+            <div class="navbar-toggle-item"></div>
+          </button>
+          <div class="navbar-collapse" id="navbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Главная</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Услуги</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">О нас</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-wrapper container">
+
+          <div
+            class="car-image"
+            category="Все машины"
+            style="transform: translate3d(0px, 0px, 0px)"
+          >
+            <div class="white">
+              <img src="./assets/images/cayenne.webp" />
+              <div
+                style="width: 12.9%; top: 66%; left: 63.75%"
+                class="wheel"
+              >
+                <img src="./assets/images/cayenne_wheel.webp" />
+              </div>
+              <div
+                style="width: 12.9%; top: 66%; left: 17.4%"
+                class="wheel"
+              >
+                <img src="./assets/images/cayenne_wheel.webp" />
+              </div>
+            </div>
+          </div>
+
+          <h1 class="hero-title">Аренда автомобилей для личных нужд</h1>
+          <p class="hero-subtitle">
+            Авто на любой вкус — путешествуй с комфортом
+          </p>
+          <a href="#contact-form" class="hero-btn btn">Связаться</a>
+        </div>
+      </section>
+      <section id="advantages" class="advantages">
+        <div class="container">
+          <div class="advantages-wrapper">
+            <div class="advantages-item">
+              <div class="advantages-item-icon">
+                <i class="bi bi-check2-circle"></i>
+              </div>
+              <h3 class="advantages-item-title">Высокое качество продукции</h3>
+              <p class="advantages-item-desc">
+                Мы уделяем особое внимание качеству автомобилей. Все
+                транспортные средства проходят тщательную проверку перед
+                арендой, что обеспечивает надежность и безопасность.
+              </p>
+            </div>
+            <div class="advantages-item">
+              <div class="advantages-item-icon">
+                <i class="bi bi-box"></i>
+              </div>
+              <h3 class="advantages-item-title">Комплексный подход</h3>
+              <p class="advantages-item-desc">
+                Аренда автомобиля — это не просто получение ключей. Мы
+                предлагаем полный спектр услуг: от консультаций по выбору машины
+                до поддержки на протяжении всего процесса аренды.
+              </p>
+            </div>
+            <div class="advantages-item">
+              <div class="advantages-item-icon">
+                <i class="bi bi-person-bounding-box"></i>
+              </div>
+              <h3 class="advantages-item-title">Индивидуальные решения</h3>
+              <p class="advantages-item-desc">
+                Каждый клиент уникален, и мы учитываем это, предлагая
+                индивидуальные решения, адаптированные под ваши потребности.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="about">
+        <div class="container">
+          <div class="about-wrapper">
+            <div class="about-img">
+              <img src="./assets/images/about-img.jpg" alt="about" />
+            </div>
+            <div class="about-info">
+              <h2 class="about-title">О нас</h2>
+              <p class="about-desc">
+                Мы — надежная компания по аренде автомобилей для личных нужд и
+                бизнеса. В нашем автопарке представлены машины от эконом-класса
+                до премиум-сегмента, что позволяет выбрать идеальный вариант для
+                любого случая.
+              </p>
+              <p class="about-desc">
+                Мы предлагаем гибкие условия аренды и высокое качество
+                обслуживания на всех этапах — от бронирования до возврата
+                автомобиля. Все машины проходят регулярное техническое
+                обслуживание, обеспечивая безопасность и комфорт.
+              </p>
+              <p class="about-desc">
+                Также доступны дополнительные услуги: доставка автомобиля,
+                аренда с водителем и специальные предложения для постоянных
+                клиентов. С нами ваше путешествие будет комфортным и приятным.
+              </p>
+              <p class="about-desc">
+                Выбирайте «АВТОТРАСТ-ЮГ» — и откройте для себя мир безграничных
+                возможностей передвижения!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="services" class="services">
+        <div class="container">
+          <div class="services-wrapper">
+            <h2 class="services-title">Сервис</h2>
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="services-item-icon">
+                    <i class="bi bi-car-front"></i>
+                  </div>
+                  <h3 class="services-item-title">
+                    Аренда автомобилей для личных нужд
+                  </h3>
+                  <p class="services-item-desc">
+                    Ищете комфортный автомобиль для поездки? У нас есть
+                    разнообразные модели на любой вкус и бюджет.
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <div class="services-item-icon">
+                    <i class="bi bi-taxi-front-fill"></i>
+                  </div>
+                  <h3 class="services-item-title">
+                    Аренда автомобилей для такси
+                  </h3>
+                  <p class="services-item-desc">
+                    Мы предлагаем специальные условия для водителей такси. Наши
+                    автомобили идеально подходят для работы в этом сегменте.
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <div class="services-item-icon">
+                    <i class="bi bi-bar-chart"></i>
+                  </div>
+                  <h3 class="services-item-title">Широкий выбор автомобилей</h3>
+                  <p class="services-item-desc">
+                    У нас вы найдете разнообразные модели — от эконом-класса до
+                    премиум-сегмента. Каждый клиент сможет выбрать автомобиль,
+                    который соответствует его потребностям и предпочтениям.
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <div class="services-item-icon">
+                    <i class="bi bi-cash-coin"></i>
+                  </div>
+                  <h3 class="services-item-title">Гибкие условия аренды</h3>
+                  <p class="services-item-desc">
+                    Мы предлагаем гибкие условия аренды, которые позволят вам
+                    арендовать автомобиль на любой срок — от нескольких часов до
+                    нескольких месяцев. Вы можете легко адаптировать аренду под
+                    свои нужды.
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <div class="services-item-icon">
+                    <i class="bi bi-people"></i>
+                  </div>
+                  <h3 class="services-item-title">Круглосуточная поддержка</h3>
+                  <p class="services-item-desc">
+                    Наша команда профессионалов всегда готова помочь вам в любое
+                    время суток. Мы ценим каждого клиента и стремимся обеспечить
+                    высокий уровень сервиса.
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <div class="services-item-icon">
+                    <i class="bi bi-exclamation-circle"></i>
+                  </div>
+                  <h3 class="services-item-title">Дополнительные услуги</h3>
+                  <p class="services-item-desc">
+                    Мы также предлагаем услуги по доставке автомобиля в удобное
+                    для вас место, а также возможность возврата в любом пункте
+                    города. Наша цель — сделать процесс аренды максимально
+                    удобным для вас.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact-form" class="contact-form">
+        <div class="container">
+          <div class="contact-form-wrapper">
+            <h2 class="contact-form-title">Свяжитесь с нами</h2>
+            <div class="contact-form-info">
+              <div class="contact-form-desc">
+                Не упустите возможность воспользоваться качественными услугами
+                аренды автомобилей от «АВТОТРАСТ-ЮГ». Заполните нашу
+                онлайн-форму бронирования или свяжитесь с нами по телефону или
+                электронной почте, и мы поможем вам выбрать идеальный автомобиль
+                для вашего путешествия. Убедитесь в качестве наших услуг и
+                насладитесь комфортом на дороге!
+              </div>
+              <form class="form" action="form-messeng">
+                <label for="name" class="contact-form-label"
+                  >Имя
+                  <div class="input">
+                    <input type="text" placeholder="Ваше имя" />
+                    <i class="bi bi-person"></i>
+                  </div>
+                </label>
+                <label for="name" class="contact-form-label"
+                  >Телефон
+                  <div class="input">
+                    <input type="tel" placeholder="Ваш телефон" />
+                    <i class="bi bi-telephone"></i>
+                  </div>
+                </label>
+                <label for="name" class="contact-form-label"
+                  >Сообщение
+                  <div class="input">
+                    <input type="text" placeholder="Ваше сообщение" />
+                    <i class="bi bi-chat-dots"></i>
+                  </div>
+                </label>
+                <button type="button" class="btn form-btn">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div class="contact-footer">
+            <h4 class="contact-footer-title">Дополнительная свзяь</h4>
+            <address class="address">
+              <div class="address-item">
+                <i class="bi bi-map"></i>
+                <span class="address-item-name">По адресу:</span>
+                <span class="address-item-target"
+                  >Краснодарский край, г.о. Город Краснодар, г Краснодар, ул
+                  Курортный Поселок, дом 57, офис 3</span
+                >
+              </div>
+              <div class="address-item">
+                <i class="bi bi-envelope"></i>
+                <span class="address-item-name">По эл. почте:</span>
+                <a class="address-item-target" href="mailto:office.pegas@bk.ru"
+                  >office.pegas@bk.ru</a
+                >
+              </div>
+              <div class="address-item">
+                <i class="bi bi-phone"></i>
+                <span class="address-item-name">По телефону:</span>
+                <a class="address-item-target" href="tel:+79952229664"
+                  >+7(995)222-96-64</a
+                >
+              </div>
+            </address>
+          </div>
+          <div class="contact-map">
+            <h4 class="contact-footer-title">Мы на карте</h4>
+            <iframe
+              class="map"
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa51ac60195189432452af92693673e551b8c2e251b7aba77eacfbd03c5c09ca6&amp;source=constructor"
+              width="100%"
+              height="200"
+              frameborder="0"
+            ></iframe>
+          </div>
+          <div class="copy">
+            <i class="bi bi-c-circle"></i>
+            <h3>Все права защищены</h3>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script src="js/lib/particles.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</html>
