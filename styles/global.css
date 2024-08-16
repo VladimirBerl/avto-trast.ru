@@ -87,6 +87,21 @@ input::placeholder {
 i {
   color: var(--card-color);
 }
+.loading-spinner{
+  display: none;
+  position: absolute;
+  z-index: 100;
+  inset: 0;
+  background-color: #dae8f5;
+}
+.speed {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 /* hero fons*/
 /*hero fons*/
 
@@ -174,7 +189,7 @@ i {
   right: -32px;
   width: 1200px;
   z-index: -1;
-  animation: car 1.4s;
+  animation: car 3.4s;
 }
 .car-img {
   transform: scaleX(-1);
@@ -182,7 +197,7 @@ i {
 .wheel-one,
 .wheel-two {
   position: absolute;
-  animation: spin 1.4s;
+  animation: spin 3.4s;
 }
 .wheel-one {
   width: 12.9%;
@@ -211,7 +226,7 @@ i {
   color: var(--main-color);
   text-transform: uppercase;
   margin-bottom: 30px;
-  animation: show 1.4s;
+  animation: show 3.4s;
 }
 .hero-subtitle {
   display: inline-block;
@@ -222,7 +237,7 @@ i {
   border-radius: var(--border-radius);
   color: var(--white-color);
   font-size: 2.5vw;
-  animation: show 1.4s;
+  animation: show 3.4s;
 }
 .hero-btn {
   font-size: 25px;
@@ -587,10 +602,9 @@ i {
   }
 }
 /* media end */
-
 /* animation */
 @keyframes car {
-  0% {
+  60% {
     right: -100%;
   }
 }
@@ -600,7 +614,7 @@ i {
   }
 }
 @keyframes show {
-  0% {
+  60% {
     transform: translateX(-100%);
   }
 }

@@ -61,28 +61,18 @@ window.addEventListener("scroll", () => {
 });
 
 // lib
-const swiper = new Swiper(".swiper", {
-  spaceBetween: 20,
-  // autoplay: {
-  //   delay: 5000,
-  // },
-  pagination: {
-    el: ".swiper-pagination",
-  },
-  slidesPerView: 1,
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-    },
-    640: {
-      slidesPerView: 2,
-    },
-    900: {
-      slidesPerView: 3,
-    },
-    1200: {
-      slidesPerView: 4,
-    },
-  },
-});
-
+function showLoadingSpinner() {
+  document.getElementById("loading-spinner").style.display = "block";
+}
+function hideLoadingSpinner() {
+  document.getElementById("loading-spinner").style.display = "none";
+}
+function uploadFiles() {
+  html.classList.add("hidden");
+  showLoadingSpinner();
+  setTimeout(() => {
+    html.classList.remove("hidden");
+    hideLoadingSpinner();
+  }, 2000);
+}
+uploadFiles();
