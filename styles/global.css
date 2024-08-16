@@ -189,7 +189,7 @@ i {
   right: -32px;
   width: 1200px;
   z-index: -1;
-  animation: car 3.4s;
+  animation: car 1.4s;
 }
 .car-img {
   transform: scaleX(-1);
@@ -197,7 +197,7 @@ i {
 .wheel-one,
 .wheel-two {
   position: absolute;
-  animation: spin 3.4s;
+  animation: spin 1.4s;
 }
 .wheel-one {
   width: 12.9%;
@@ -226,7 +226,7 @@ i {
   color: var(--main-color);
   text-transform: uppercase;
   margin-bottom: 30px;
-  animation: show 3.4s;
+  animation: show 1.4s;
 }
 .hero-subtitle {
   display: inline-block;
@@ -237,7 +237,7 @@ i {
   border-radius: var(--border-radius);
   color: var(--white-color);
   font-size: 2.5vw;
-  animation: show 3.4s;
+  animation: show 1.4s;
 }
 .hero-btn {
   font-size: 25px;
@@ -604,7 +604,7 @@ i {
 /* media end */
 /* animation */
 @keyframes car {
-  60% {
+  0% {
     right: -100%;
   }
 }
@@ -614,7 +614,7 @@ i {
   }
 }
 @keyframes show {
-  60% {
+  0% {
     transform: translateX(-100%);
   }
 }

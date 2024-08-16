@@ -5,23 +5,6 @@ const navbar = document.getElementById("navbar");
 const toggleButton = document.getElementById("navbar-toggle");
 const navLinks = navbar.querySelectorAll(".nav-link");
 
-// loading
-function showLoadingSpinner() {
-  document.getElementById("loading-spinner").style.display = "block";
-}
-function hideLoadingSpinner() {
-  document.getElementById("loading-spinner").style.display = "none";
-}
-function uploadFiles() {
-  html.classList.add("hidden");
-  showLoadingSpinner();
-  setTimeout(() => {
-    html.classList.remove("hidden");
-    hideLoadingSpinner();
-  }, 2000);
-}
-uploadFiles();
-
 const toggleModal = () => {
   const isActive = toggleButton.classList.toggle("active");
   navbar.classList.toggle("active", isActive);
