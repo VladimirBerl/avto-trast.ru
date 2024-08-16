@@ -18,7 +18,7 @@
     <header id="header">
       <div class="container">
         <nav class="navbar">
-          <a class="navbar-logo" href="#">АВТОТРАСТ-ЮГ</a>
+          <a class="navbar-logo" href="#">АВТОТРАСТ <span>> ЮГ</span></a>
           <button class="navbar-toggle" id="navbar-toggle">
             <div class="navbar-toggle-item"></div>
             <div class="navbar-toggle-item"></div>
@@ -34,6 +34,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="#about">О нас</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact-form">Связь</a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -42,33 +45,20 @@
     <main>
       <section class="hero">
         <div class="hero-wrapper container">
-
-          <div
-            class="car-image"
-            category="Все машины"
-            style="transform: translate3d(0px, 0px, 0px)"
-          >
-            <div class="white">
-              <img src="./assets/images/cayenne.webp" />
-              <div
-                style="width: 12.9%; top: 66%; left: 63.75%"
-                class="wheel"
-              >
-                <img src="./assets/images/cayenne_wheel.webp" />
-              </div>
-              <div
-                style="width: 12.9%; top: 66%; left: 17.4%"
-                class="wheel"
-              >
-                <img src="./assets/images/cayenne_wheel.webp" />
-              </div>
+          <div class="car-image">
+            <img class="car-img" src="./assets/images/cayenne.webp" />
+            <div class="wheel-one">
+              <img src="./assets/images/cayenne_wheel.webp" />
+            </div>
+            <div class="wheel-two">
+              <img src="./assets/images/cayenne_wheel.webp" />
             </div>
           </div>
 
           <h1 class="hero-title">Аренда автомобилей для личных нужд</h1>
-          <p class="hero-subtitle">
-            Авто на любой вкус — путешествуй с комфортом
-          </p>
+          <div class="hero-subtitle">
+            <span>Авто на любой вкус — путешествуй с комфортом</span>
+          </div>
           <a href="#contact-form" class="hero-btn btn">Связаться</a>
         </div>
       </section>

@@ -2,22 +2,26 @@
 @import url(./fonts/stylesheet.css);
 
 :root {
-  --background-color: #17212b;
-  --text-color: #fff;
-  --text-secondary-color: #7f91a4;
   --background-icon: #4a5867;
-  --line-color: #2c3743;
 
   --danger-color: #ff6270;
   --success-color: #70cf98;
   --warning-color: #f2c94c;
 
   --grey-color: #7f91a4;
-  --main-color: #7177f8;
+  --main-color: #454cee;
   --main-variant-color: #525aff;
   --transition-duration: 0.2s;
   --transition-function: ease-in-out;
   --border-radius: 12px;
+
+  --white-color: #fff;
+  --text-secondary-color: #83899f;
+  --card-color: #f8f9fa;
+  --text-color: #26325c;
+  --background-color: #fff;
+  --background-header: #26325c;
+  --box-shadow: 0px 0px 8px 0px rgba(5, 12, 38, 0.12);
 }
 html {
   scroll-behavior: smooth;
@@ -43,16 +47,14 @@ html.hidden {
 }
 .btn {
   text-align: center;
-  max-width: 320px;
   width: 100%;
-  color: var(--light-color);
+  color: var(--white-color);
   background-color: var(--main-color);
   margin-top: 30px;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: var(--border-radius);
   transition: all var(--transition-duration) var(--transition-function);
-  box-shadow: 0px 1px 16px 3px #0000006f;
 }
 .btn:hover {
   background-color: var(--main-variant-color);
@@ -68,29 +70,24 @@ input {
 
   outline: none;
   resize: none;
-  background-color: transparent;
-  border: 1px solid var(--background-color);
+  background-color: var(--background-color);
+  border: 1.5px solid var(--background-color);
   border-radius: var(--border-radius);
   transition: all var(--transition-duration) var(--transition-function);
 }
 input:active,
 input:focus,
 input:hover {
-  border: 1px solid var(--main-color);
+  border: 1.5px solid var(--main-color);
 }
 input::placeholder {
   color: var(--text-secondary-color);
 }
-/* hero fons*/
-#particles-js {
-  width: 100%;
-  height: 100%;
-  background-color: var(--background-color);
-  background-image: url("");
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
+
+i {
+  color: var(--card-color);
 }
+/* hero fons*/
 /*hero fons*/
 
 /* header */
@@ -100,8 +97,9 @@ input::placeholder {
   left: 0;
   right: 0;
   z-index: 98;
+  color: var(--white-color);
   transition: var(--transition-duration) var(--transition-function);
-  background-color: var(--line-color);
+  background-color: var(--background-header);
   box-shadow: 0px 1px 16px 3px #00000050;
 }
 #header.hidden {
@@ -112,11 +110,14 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 22px 0;
+  padding: 27px 0;
 }
 .navbar-logo {
   font-size: 16px;
   text-transform: uppercase;
+}
+.navbar-logo span {
+  color: var(--main-color);
 }
 .navbar-nav {
   display: flex;
@@ -168,22 +169,30 @@ input::placeholder {
 
 /* main */
 /* hero */
-
 .car-image {
   position: absolute;
-  left: 0;
+  right: -32px;
+  width: 1200px;
   z-index: -1;
   animation: car 1.4s;
 }
-.car-image > div > img {
-  width: 94%;
+.car-img {
+  transform: scaleX(-1);
 }
-.car-image .wheel {
+.wheel-one,
+.wheel-two {
   position: absolute;
   animation: spin 1.4s;
 }
-.car-image .wheel {
-  margin-top: -0.35%;
+.wheel-one {
+  width: 12.9%;
+  top: 65.4%;
+  left: 18.7%;
+}
+.wheel-two {
+  width: 12.9%;
+  top: 65.9%;
+  left: 68.25%;
 }
 
 .hero {
@@ -197,17 +206,28 @@ input::placeholder {
   min-height: 550px;
 }
 .hero-title {
+  font-weight: bold;
   font-size: 5vw;
   color: var(--main-color);
   text-transform: uppercase;
   margin-bottom: 30px;
+  animation: show 1.4s;
 }
 .hero-subtitle {
-  color: #ffffff;
+  display: inline-block;
+  padding: 3px;
+  width: 100%;
+  width: max-content;
+  background-color: var(--success-color);
+  border-radius: var(--border-radius);
+  color: var(--white-color);
   font-size: 2.5vw;
+  animation: show 1.4s;
 }
 .hero-btn {
-  font-size: 18px;
+  font-size: 25px;
+  margin-left: auto;
+  max-width: 400px;
 }
 /* hero end */
 /* advantages */
@@ -227,8 +247,9 @@ input::placeholder {
   min-height: 200px;
   width: 100%;
   padding: 24px;
-  background-color: var(--line-color);
+  background-color: var(--card-color);
   border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 .advantages-item-icon {
   display: inline-flex;
@@ -240,7 +261,7 @@ input::placeholder {
   height: 48px;
   margin-bottom: 16px;
   border-radius: 50%;
-  background-color: var(--background-icon);
+  background-color: var(--text-color);
 }
 .advantages-item-icon i {
   font-size: 22px;
@@ -288,9 +309,10 @@ input::placeholder {
 }
 .services-title {
   font-size: 24px;
-  margin-bottom: 16px;
+  margin-bottom: 1px;
 }
 .swiper {
+  padding: 15px !important;
   width: 100%;
   height: 240px;
 }
@@ -298,10 +320,16 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 88% !important;
   padding: 24px;
-  background-color: var(--line-color);
+  background-color: var(--card-color);
   border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+.swiper-pagination {
+  bottom: var(--swiper-pagination-bottom, -1px) !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--main-color) !important;
 }
 .services-item-icon {
   display: inline-flex;
@@ -313,7 +341,7 @@ input::placeholder {
   height: 48px;
   margin-bottom: 16px;
   border-radius: 50%;
-  background-color: var(--background-icon);
+  background-color: var(--text-color);
 }
 .services-item-icon i {
   font-size: 22px;
@@ -339,10 +367,12 @@ input::placeholder {
   display: flex;
   gap: 30px;
   padding: 24px;
-  background-color: var(--line-color);
+  background-color: var(--card-color);
   border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 .contact-form-desc {
+  text-align: center;
   width: 50%;
   color: var(--text-secondary-color);
 }
@@ -354,6 +384,9 @@ input::placeholder {
 }
 .contact-form-label input {
   margin-top: 10px;
+}
+.form-btn {
+  max-width: 400px;
 }
 .input {
   position: relative;
@@ -383,7 +416,8 @@ input::placeholder {
 /* footer */
 .footer {
   padding: 24px 0px;
-  background-color: var(--line-color);
+  background-color: var(--background-header);
+  box-shadow: 1px 0px 16px 3px #00000050;
 }
 .contact-footer {
   margin-bottom: 30px;
@@ -396,7 +430,8 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  color: var(--text-secondary-color);
+  color: var(--white-color);
+  font-weight: normal;
 }
 .address-item {
   display: flex;
@@ -428,18 +463,37 @@ input::placeholder {
 /* footer end */
 
 /* media */
+@media screen and (max-width: 1200px) {
+  .car-image {
+    width: 1000px;
+  }
+}
 @media screen and (max-width: 920px) {
+  .car-image {
+    width: 800px;
+  }
   .advantages-wrapper {
     flex-wrap: wrap;
   }
   .hero-wrapper {
+    min-height: 400px;
     align-items: center;
+  }
+  .hero-btn {
+    margin-left: 0;
   }
   .hero-title {
     text-align: center;
   }
 }
 @media screen and (max-width: 750px) {
+  .hero-btn {
+    font-size: 18px;
+  }
+  .car-image {
+    width: 928px;
+    right: -60%;
+  }
   .contact-form-info {
     flex-wrap: wrap;
   }
@@ -449,14 +503,18 @@ input::placeholder {
 }
 @media screen and (max-width: 600px) {
   .hero-wrapper {
-    min-height: 380px;
+    min-height: 320px;
+  }
+  .car-image {
+    width: 750px;
   }
   .hero-title {
-    font-size: 20px;
+    font-size: 30px;
   }
   .hero-subtitle {
     text-align: center;
-    font-size: 13px;
+    font-size: 20px;
+    max-width: 320px;
   }
   .navbar-toggle {
     opacity: 1;
@@ -473,7 +531,7 @@ input::placeholder {
     height: 100vh;
     z-index: 98;
     border-left: 2px solid var(--main-color);
-    background-color: var(--line-color);
+    background-color: var(--card-color);
     border-top-left-radius: var(--border-radius);
     border-bottom-left-radius: var(--border-radius);
     transition: all var(--transition-function) var(--transition-duration);
@@ -486,6 +544,7 @@ input::placeholder {
     opacity: 1;
     visibility: visible;
     right: 0;
+    background-color: var(--background-header);
   }
   .navbar-nav {
     flex-direction: column;
@@ -498,7 +557,28 @@ input::placeholder {
     max-height: 200px;
   }
 }
+@media screen and (max-width: 450px) {
+  .hero-title {
+    font-size: 23px;
+    margin-bottom: 17px;
+  }
+  .hero-subtitle {
+    text-align: center;
+    font-size: 13px;
+    max-width: 220px;
+    padding: 1px;
+  }
+  .car-image {
+    width: 650px;
+  }
+  .hero-btn {
+    max-width: 300px;
+  }
+}
 @media screen and (max-width: 375px) {
+  .car-image {
+    width: 450px;
+  }
   .hero-wrapper {
     min-height: 250px;
   }
@@ -511,15 +591,17 @@ input::placeholder {
 /* animation */
 @keyframes car {
   0% {
-    left: -100%;
-  }
-  30% {
-    left: -100%;
+    right: -100%;
   }
 }
 @keyframes spin {
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes show {
+  0% {
+    transform: translateX(-100%);
   }
 }
 /* animation end */

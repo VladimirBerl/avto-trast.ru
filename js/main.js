@@ -63,9 +63,9 @@ window.addEventListener("scroll", () => {
 // lib
 const swiper = new Swiper(".swiper", {
   spaceBetween: 20,
-  autoplay: {
-    delay: 5000,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  // },
   pagination: {
     el: ".swiper-pagination",
   },
