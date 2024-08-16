@@ -5,6 +5,23 @@ const navbar = document.getElementById("navbar");
 const toggleButton = document.getElementById("navbar-toggle");
 const navLinks = navbar.querySelectorAll(".nav-link");
 
+// loading
+function showLoadingSpinner() {
+  document.getElementById("loading-spinner").style.display = "block";
+}
+function hideLoadingSpinner() {
+  document.getElementById("loading-spinner").style.display = "none";
+}
+function uploadFiles() {
+  html.classList.add("hidden");
+  showLoadingSpinner();
+  setTimeout(() => {
+    html.classList.remove("hidden");
+    hideLoadingSpinner();
+  }, 2000);
+}
+uploadFiles();
+
 const toggleModal = () => {
   const isActive = toggleButton.classList.toggle("active");
   navbar.classList.toggle("active", isActive);
@@ -36,18 +53,15 @@ navLinks.forEach((link) => {
 let lastScrollTop = 0;
 let isScrolling;
 const onScroll = () => {
-  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  let scrollTop = document.documentElement.scrollTop;
 
-  // Проверяем направление скролла
   if (scrollTop > lastScrollTop) {
-    // Скролл вниз - скрываем хедер
     header.classList.add("hidden");
   } else {
-    // Скролл вверх - показываем хедер
     header.classList.remove("hidden");
   }
 
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Не позволяем lastScrollTop становиться отрицательным
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 };
 window.addEventListener("scroll", () => {
   if (!isScrolling) {
@@ -61,18 +75,30 @@ window.addEventListener("scroll", () => {
 });
 
 // lib
-function showLoadingSpinner() {
-  document.getElementById("loading-spinner").style.display = "block";
-}
-function hideLoadingSpinner() {
-  document.getElementById("loading-spinner").style.display = "none";
-}
-function uploadFiles() {
-  html.classList.add("hidden");
-  showLoadingSpinner();
-  setTimeout(() => {
-    html.classList.remove("hidden");
-    hideLoadingSpinner();
-  }, 2000);
-}
-uploadFiles();
+const swiper = new Swiper(".swiper", {
+  spaceBetween: 20,
+  autoplay: {
+    delay: 5000,
+  },
+  autoplay: {
+    delay: 5000,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  slidesPerView: 1,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    640: {
+      slidesPerView: 2,
+    },
+    900: {
+      slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 4,
+    },
+  },
+});
