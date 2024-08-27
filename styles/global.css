@@ -232,12 +232,15 @@ i {
   display: inline-block;
   padding: 3px;
   width: 100%;
-  width: max-content;
+  max-width: max-content;
   background-color: var(--success-color);
   border-radius: var(--border-radius);
   color: var(--white-color);
   font-size: 2.5vw;
   animation: show 1.4s;
+  & span {
+    text-align: justify;
+  }
 }
 .hero-btn {
   font-size: 25px;
